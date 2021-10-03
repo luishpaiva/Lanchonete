@@ -1,4 +1,4 @@
-drop database if exists Lanchonete;
+﻿drop database if exists Lanchonete;
 
 create database if not exists Lanchonete;
 
@@ -59,15 +59,15 @@ insert into Lanchonete.Status (codigoStatus, descricao) values (2, 'Entregue');
 
 insert into Lanchonete.Cliente (nome, telefone, enderecoLogradouro, enderecoNumero, enderecoBairro, enderecoCidade)
 values	('João da Silva', '41999500599', 'Avenida Getúlio Vargas', '700', 'Água Verde', 'Curtitiba'),
-		('Maria Oliveira', '4132991234', 'Avenida Comendador Franco', '1209', 'Jardim Botânico', 'Curtitiba'),
+	('Maria Oliveira', '4132991234', 'Avenida Comendador Franco', '1209', 'Jardim Botânico', 'Curtitiba'),
         ('Helena Siqueira de Almeida', '4198761234', 'Rua Veneza', '26', 'Zona 04', 'Maringá'),
         ('Antônio Conceição Carneiro', '4199912345', 'XV de Novembro', '1001', 'Morro Alto', 'Guarapuava'),
         ('Bernardo Siqueira Mendes', '4132100987', 'Rua Teodomiro Furtado', '378', 'Xaxim', 'Curtitiba');
 
 insert into Lanchonete.Entregador (nome, telefone)
 values 	('Josimar Teobaldo Nassim', '41990092348'),
-		('Mônica Taborda de Alencar', '41999775544'),
-		('Hermes Lindomar Campos', '4198767890');
+	('Mônica Taborda de Alencar', '41999775544'),
+	('Hermes Lindomar Campos', '4198767890');
 
 insert into Lanchonete.Pedido (quantidade, codigoStatus, dataEmissao, codigoCliente, codigoEntregador)
 values	(2, 0, default, 5, 3), (1, 2, default, 4, 1), (3, 1, default, 1, 2), (2, 2, default, 2, 3), (4, 0, default, 3, 3),
@@ -75,6 +75,6 @@ values	(2, 0, default, 5, 3), (1, 2, default, 4, 1), (3, 1, default, 1, 2), (2, 
 
 insert into Lanchonete.Sanduiche (nome, preco, codigoPedido)
 values 	('X-Salada', 4.50, 1), ('X-Bacon', 4.99, 3), ('Hot-Dog', 3.20, 5), ('Moda da Casa', 2.99, 7),
-		('Misto Quente', 3.00, 8), ('X-Tudo', 8.50, 6), ('X-Salada', 4.50, 2), ('Hot-Dog', 4.50, 4);
+	('Misto Quente', 3.00, 8), ('X-Tudo', 8.50, 6), ('X-Salada', 4.50, 2), ('Hot-Dog', 4.50, 4);
 
 select * from Lanchonete.Pedido where codigoStatus = 0;
